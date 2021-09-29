@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class OrdenaStrings {
     public static void main(String[] args) {
@@ -12,6 +13,17 @@ public class OrdenaStrings {
 
         palavras.sort(new ComparadorPorTamanho());
         System.out.println(palavras);
+
+        System.out.println("----------");
+
+        palavras.forEach(new ImprimeLinha());
+    }
+}
+
+class ImprimeLinha implements Consumer<String> {
+    @Override
+    public void accept(String s) {
+        System.out.println(s);
     }
 }
 
