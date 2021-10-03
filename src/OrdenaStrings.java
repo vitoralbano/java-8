@@ -11,18 +11,11 @@ public class OrdenaStrings {
         palavras.add("cursos online");
         palavras.add("recursos java 8");
 
-        palavras.sort(new ComparadorPorTamanho());
+        palavras.sort((s1, s2) -> s1.compareTo(s2));
         System.out.println(palavras);
 
         System.out.println("----------");
 
         palavras.forEach(System.out::println);
-    }
-}
-
-class ComparadorPorTamanho implements Comparator<String> {
-    @Override
-    public int compare(String o1, String o2) {
-        return Integer.compare(o1.length(), o2.length());
     }
 }
