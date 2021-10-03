@@ -11,7 +11,7 @@ public class OrdenaStrings {
         palavras.add("cursos online");
         palavras.add("recursos java 8");
 
-        palavras.sort((s1, s2) -> s1.compareTo(s2));
+        palavras.sort(String::compareTo);
         System.out.println(palavras);
 
         System.out.println("----------");
