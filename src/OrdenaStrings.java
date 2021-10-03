@@ -16,14 +16,7 @@ public class OrdenaStrings {
 
         System.out.println("----------");
 
-        palavras.forEach(new ImprimeLinha());
-    }
-}
-
-class ImprimeLinha implements Consumer<String> {
-    @Override
-    public void accept(String s) {
-        System.out.println(s);
+        palavras.forEach(System.out::println);
     }
 }
 
