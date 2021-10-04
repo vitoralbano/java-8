@@ -15,5 +15,8 @@ public class ExemploCursos {
         cursos.stream()
                 .filter(c -> c.getAlunos() > 50)
                 .forEach(System.out::println);
+
+        cursos.stream().map(Curso::getNome)
+                .forEach(System.out::println);
     }
 }
